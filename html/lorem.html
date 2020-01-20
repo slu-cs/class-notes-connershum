@@ -4,11 +4,60 @@
   <head>
     <meta charset = "utf-8">
     <title>Lorem News</title>
+    <style>
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        padding: 1%;
+      }
+
+      header {
+        background: #e9ecef;
+        text-align: center;
+        padding-top: 0.25%;
+        padding-bottom: 1.5%;
+      }
+
+      #motto {
+        font-style: italic;
+      }
+
+      main {
+        width: 75%;
+        float: left;
+      }
+
+      nav {
+        width: 23%;
+        float: right;
+      }
+
+      main img {
+        float: left;
+        margin-right: 2%;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      nav li {
+        padding: 5%;
+        border: 1px solid #e9ecef;
+      }
+
+      .article {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+    </style>
   </head>
   <body>
     <header>
       <h1>Lorem News</h1>
-      <span>The real fake news</span>
+      <span id="motto">The real fake news</span>
     </header>
     <main>
       <article>
@@ -18,14 +67,15 @@
         <p>Morbi nec arcu a libero vestibulum eleifend et iaculis diam. Maecenas at tincidunt augue. Nullam sagittis purus at sollicitudin dapibus. Nullam sodales lectus urna, nec consequat lectus scelerisque non. In tincidunt nisi nibh, vel placerat ligula tempor a. Sed lobortis turpis vitae fringilla hendrerit. Proin mattis venenatis nibh, quis egestas ex euismod a. Maecenas sed rhoncus ligula, aliquet tempor mauris. Pellentesque tortor turpis, pulvinar in quam vitae, volutpat ornare massa.
         </p>
       </article>
+    </main>
       <nav>
+        <h2>See Also</h2>
         <ul>
-          <li><a href="#">Sed sed nunc id erat faucibus pulvinar.</a></li>
-          <li><a href="#">Duis suscipit orci et odio eleifend, in iaculis quam vehicula.</a></li>
-          <li><a href="#">Mauris quis urna ut velit scelerisque dignissim.</a></li>
-          <li><a href="#">Proin eu nulla sit amet dui tincidunt aliquet.</a></li>
+          <li><a href="#" class="article">Sed sed nunc id erat faucibus pulvinar.</a></li>
+          <li><a href="#" class="article">Duis suscipit orci et odio eleifend, in iaculis quam vehicula.</a></li>
+          <li><a href="#" class="article">Mauris quis urna ut velit scelerisque dignissim.</a></li>
+          <li><a href="#" class="article">Proin eu nulla sit amet dui tincidunt aliquet.</a></li>
         </ul>
       </nav>
-    </main>
   </body>
 </html>
