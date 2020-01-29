@@ -29,7 +29,7 @@ for (let i = 1; i <= 100; i++) {
 }
 
 // Print the smallest integer that is divisible by all the integers from 1 through 10
-let num = 0;
+let num = 1;
 let found = false;
 while (found === false) {
   let checker = true;
