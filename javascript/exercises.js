@@ -33,7 +33,7 @@ let num = 0;
 let found = false;
 while (found === false) {
   let checker = true;
-  for (let i = 1; i <= 10; 1++) {
+  for (let i = 1; i <= 10; i++) {
     if (num % i !== 0) {
       checker = false;
     }
