@@ -27,3 +27,17 @@ for (let i = 1; i <= 100; i++) {
     console.log(i);
   }
 }
+
+// Print the smallest integer that is divisible by all the integers from 1 through 10
+let num = 0;
+let found = false;
+while (found === false) {
+  let checker = true;
+  for (let i = 1; i <= 10; 1++) {
+    if (num % i !== 0) {
+      checker = false;
+    }
+  }
+  found = checker;
+}
+console.log(num);
