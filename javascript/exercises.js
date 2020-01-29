@@ -19,11 +19,11 @@ console.log(fib2);
 
 // 3. Print the number of integers from 1 through 100 that are divisible by 3 or 5 but not both
 for (let i = 1; i <= 100; i++) {
-  if (i % 3 === 0) and (i % 5 === 0) {
+  if ((i % 3 === 0) && (i % 5 === 0)) {
     continue;
-  } else if (i % 3) {
+  } else if (i % 3 === 0) {
     console.log(i);
-  } else if (i % 5) {
+  } else if (i % 5 === 0) {
     console.log(i);
   }
 }
