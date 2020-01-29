@@ -20,7 +20,10 @@ while (x < 3) {
 
 // Conditional
 if (x === 3) {
-  console.log('x is now 3')
+  console.log('x is now 3');
 } else {
-  console.log(`x is now ${x}`)
+  console.log(`x is now ${x}`);
 }
+
+// Change
+console.log('Now it prints this.');
