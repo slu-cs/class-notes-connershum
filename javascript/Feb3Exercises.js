@@ -47,6 +47,7 @@ const range = function(a) {
   for (let i=0; i < a; i++) {
     result.push(i);
   }
+  return result;
 };
 
 console.log(range(5));
