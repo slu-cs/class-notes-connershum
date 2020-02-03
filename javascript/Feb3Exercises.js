@@ -11,3 +11,11 @@ const courses = [
   new course('PHIL', 202)
 ];
 console.log(courses);
+
+let max = 0
+for (let i=0; i < courses.length; i++) {
+  if courses[i].number > max {
+    max = courses[i].number;
+  }
+}
+console.log(max);
