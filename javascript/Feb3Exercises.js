@@ -1,4 +1,6 @@
-// 1.
+// 1. Create an array of objects representing the courses you are taking this semester.
+// Each course should have a subject (e.g. 'CS') and a number (e.g. 332).
+// Iterate through this array to find the largest course number in your schedule.
 const Course = function(subject, number) {
   this.subject = subject;
   this.number = number;
@@ -20,7 +22,9 @@ for (let i=0; i < courses.length; i++) {
 }
 console.log(max);
 
-// 2.
+// 2. Define a constructor function for Book objects. Each book should have a title and an array of authors.
+// Define a shared method for books that lets you check whether a given author was one of the authors
+// in this book.
 const Book = function(title, authors) {
   this.title = title;
   this.authors = authors;
@@ -41,7 +45,7 @@ Book.prototype.authorcheck = function(author) {
 console.log(MobyDick.authorcheck('Bill'));
 console.log(MobyDick.authorcheck('Conner'));
 
-// 3.
+// 3. Define a function that works like the range function in Python.
 let range = function(a, b) {
   let result = [];
   if (b === undefined) {
