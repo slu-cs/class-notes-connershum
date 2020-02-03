@@ -42,12 +42,21 @@ console.log(MobyDick.authorcheck('Bill'));
 console.log(MobyDick.authorcheck('Conner'));
 
 // 3.
-const range = function(a) {
+const range = function(b) {
   let result = [];
-  for (let i=0; i < a; i++) {
+  for (let i=0; i < b; i++) {
+    result.push(i);
+  }
+  return result;
+};
+
+const range = function(a, b) {
+  let result = [];
+  for (let i=a; i < b; i++) {
     result.push(i);
   }
   return result;
 };
 
 console.log(range(5));
+console.log(range(3, 8));
