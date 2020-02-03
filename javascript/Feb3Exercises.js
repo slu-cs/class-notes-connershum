@@ -31,9 +31,12 @@ const MobyDick = new Book('MobyDick', ['Bill', 'Ted', 'Name']);
 Book.prototype.authorcheck = function(author) {
   let result = false
   for (let i=0; i < this.authors.length; i++) {
-    if author === this.authors[i] {
+    if (author === this.authors[i]) {
       result = true;
     }
   }
   return result;
 }
+
+console.log(MobyDick.authorcheck('Bill'))
+console.log(MobyDick.authorcheck('Conner'))
