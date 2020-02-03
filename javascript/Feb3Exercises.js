@@ -38,5 +38,15 @@ Book.prototype.authorcheck = function(author) {
   return result;
 }
 
-console.log(MobyDick.authorcheck('Bill'))
-console.log(MobyDick.authorcheck('Conner'))
+console.log(MobyDick.authorcheck('Bill'));
+console.log(MobyDick.authorcheck('Conner'));
+
+// 3.
+const range = function(a) {
+  let result = [];
+  for (let i=0; i < a; i++) {
+    result.push(i);
+  }
+};
+
+console.log(range(5));
