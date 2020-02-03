@@ -1,14 +1,14 @@
 // 1.
-const course = function(subject, number) {
+const Course = function(subject, number) {
   this.subject = subject;
   this.number = number;
 };
 
 const courses = [
-  new course('CS', 332),
-  new course('CS', 364),
-  new course('ACC', 204),
-  new course('PHIL', 202)
+  new Course('CS', 332),
+  new Course('CS', 364),
+  new Course('ACC', 204),
+  new Course('PHIL', 202)
 ];
 console.log(courses);
 
@@ -19,3 +19,21 @@ for (let i=0; i < courses.length; i++) {
   }
 }
 console.log(max);
+
+// 2.
+const Book = function(title, authors) {
+  this.title = title;
+  this.authors = authors;
+}
+
+const MobyDick = new Book('MobyDick', ['Bill', 'Ted', 'Name']);
+
+Book.prototype.authorcheck = function(author) {
+  let result = false
+  for (let i=0; i < this.authors.length; i++) {
+    if author === this.authors[i] {
+      result = true;
+    }
+  }
+  return result;
+}
