@@ -44,7 +44,7 @@ console.log(MobyDick.authorcheck('Conner'));
 // 3.
 let range = function(a, b) {
   let result = [];
-  if (b === Undefined) {
+  if (b === undefined) {
     for (let i=0; i < a; i++) {
       result.push(i);
     }
