@@ -7,7 +7,7 @@ console.log(numbers);
 console.log(odds);
 
 // Try it out, and then write your own filter function, which would be called differently:
-const filter = function(list, filt) {
+const filter = function(array, filt) {
   const copy = [];
   for (const element of array) {
     if (filt(element) === true){
