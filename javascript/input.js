@@ -27,7 +27,6 @@ user.question('Filename: ', function(filename) {
   file.on('close', function() {
     process.exit(0);
   });
-
 });
 
 // This part isn't after the console input
