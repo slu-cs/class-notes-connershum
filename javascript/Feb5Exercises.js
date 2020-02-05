@@ -21,3 +21,11 @@ const numbers2 = [1, 2, 3, 4, 5];
 const odds2 = filter(numbers, x => x%2 > 0);
 console.log(numbers2);
 console.log(odds2);
+
+// 2. JavaScript arrays have a sort method that works like this:
+
+const numbers3 = [4, 2, 5, 1, 3];
+numbers.sort((a,b) => a - b);
+
+// Try it out, and read about how it works.
+// Then rewrite the arrow function to reverse sort the array instead.
