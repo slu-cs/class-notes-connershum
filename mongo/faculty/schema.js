@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 // Schema for a collection of professors
-const Professor = new mongoose.schema({
+const Professor = new mongoose.Schema({
   name: String,
   range: String,
   started: Number,
