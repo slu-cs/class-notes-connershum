@@ -10,5 +10,5 @@ connect(); // To the database
 const query = Professor.find();
 query.exec(function(error, professors) {
   if (error) console.error(error.stack);
-  console.log(professor);
+  console.log(professors);
 });
