@@ -29,7 +29,7 @@ const lee = new Professor({
 });
 
 // Delete any previous database
-mongoose.connect.dropDatabase(function() {
+mongoose.connection.dropDatabase(function() {
 
   // Save the new data
   harcourt.save(function(error) {
