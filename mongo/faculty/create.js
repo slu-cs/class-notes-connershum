@@ -43,7 +43,7 @@ mongoose.connect.dropDatabase(function() {
 
         // Disconnect
         mongoose.connection.close(function() {
-          console.log('Database Saved');
+          console.log('Database is ready.');
         });
       });
     });
