@@ -68,3 +68,4 @@ queries[4].exec(function(error, professors) {
   if (error) console.error(error.stack);
 
   console.log('Distinct Ranks: ', ranks)
+});
