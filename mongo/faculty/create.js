@@ -34,7 +34,7 @@ mongoose.connection.dropDatabase()
   .then(() => torrey.save())
   .then(() => lee.save())
   .then(() => mongoose.connection.close())
-  .then(() console.log('Database is ready.'))
+  .then(() => console.log('Database is ready.'))
   .catch(error => console.error(error.stack));
 
 /*
