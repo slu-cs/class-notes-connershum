@@ -33,7 +33,7 @@ const queries = [
 
 // Professor.find().sort('name')
 queries[0].exec(function(error, professors) {
-  if (error console.error(error.stack);
+  if (error) console.error(error.stack);
 
   const names = professors.map(p => p.name);
   console.log('Names in order: ', names)
@@ -41,7 +41,7 @@ queries[0].exec(function(error, professors) {
 
 // Professor.find().sort('-started').limit(1)
 queries[1].exec(function(error, professors) {
-  if (error console.error(error.stack);
+  if (error) console.error(error.stack);
 
   const names = professors.map(p => p.name);
   console.log('Started most recently: ', names)
@@ -49,7 +49,7 @@ queries[1].exec(function(error, professors) {
 
 // Professor.find().where('started').equals(2003)
 queries[2].exec(function(error, professors) {
-  if (error console.error(error.stack);
+  if (error) console.error(error.stack);
 
   const names = professors.map(p => p.name);
   console.log('Started in 2003: ', names)
@@ -57,7 +57,7 @@ queries[2].exec(function(error, professors) {
 
 // Professor.find().where('courses').in(362)
 queries[3].exec(function(error, professors) {
-  if (error console.error(error.stack);
+  if (error) console.error(error.stack);
 
   const names = professors.map(p => p.name);
   console.log('Teaches 362: ', names)
@@ -65,6 +65,6 @@ queries[3].exec(function(error, professors) {
 
 // Professor.distinct('rank')
 queries[4].exec(function(error, professors) {
-  if (error console.error(error.stack);
+  if (error) console.error(error.stack);
 
   console.log('Distinct Ranks: ', ranks)
