@@ -64,7 +64,7 @@ queries[3].exec(function(error, professors) {
 });
 
 // Professor.distinct('rank')
-queries[4].exec(function(error, professors) {
+queries[4].exec(function(error, ranks) {
   if (error) console.error(error.stack);
 
   console.log('Distinct Ranks: ', ranks);
