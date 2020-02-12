@@ -44,7 +44,7 @@ queries[1].exec(function(error, professors) {
   if (error) console.error(error.stack);
 
   const names = professors.map(p => p.name);
-  console.log('Started most recently: ', names)
+  console.log('Started most recently: ', names);
 });
 
 // Professor.find().where('started').equals(2003)
@@ -52,7 +52,7 @@ queries[2].exec(function(error, professors) {
   if (error) console.error(error.stack);
 
   const names = professors.map(p => p.name);
-  console.log('Started in 2003: ', names)
+  console.log('Started in 2003: ', names);
 });
 
 // Professor.find().where('courses').in(362)
@@ -60,12 +60,12 @@ queries[3].exec(function(error, professors) {
   if (error) console.error(error.stack);
 
   const names = professors.map(p => p.name);
-  console.log('Teaches 362: ', names)
+  console.log('Teaches 362: ', names);
 });
 
 // Professor.distinct('rank')
 queries[4].exec(function(error, professors) {
   if (error) console.error(error.stack);
 
-  console.log('Distinct Ranks: ', ranks)
+  console.log('Distinct Ranks: ', ranks);
 });
