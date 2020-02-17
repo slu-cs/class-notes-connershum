@@ -30,3 +30,4 @@ console.log(numbers.sort((a,b) => a - b));
 
 // Try it out, and read about how it works.
 // Then rewrite the arrow function to reverse sort the array instead.
+console.log(numbers.sort((a,b) => b - a));
