@@ -25,8 +25,8 @@ console.log(odds2);
 // 2. JavaScript arrays have a sort method that works like this:
 
 const numbers3 = [4, 2, 5, 1, 3];
-numbers.sort((a,b) => a - b);
 console.log(numbers3);
+console.log(numbers.sort((a,b) => a - b));
 
 // Try it out, and read about how it works.
 // Then rewrite the arrow function to reverse sort the array instead.
