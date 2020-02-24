@@ -6,8 +6,7 @@
   </head>
   <body>
     <form>
-      <input type="text" name="left">
-      <input type="text" name="right">
+      <input type="text" name="new">
       <button type="submit">Submit</button>
     </form>
     <div id="history"></div>
@@ -17,33 +16,29 @@
       crossorigin="anonymous"></script>
     <script>
 
-    // Number of times the form has been submitted
-    let counter = 0;
-
     // Respond to submit events
     $('form').on('submit', function(event) {
       const form = $(this);
       event.preventDefault();
 
-      // Create a new list
+      // Create a new div
+      const obj = $('<div class="row"></div>');
 
       // Translate each input value into a list item
-      const inputs = form.find('input'); // JQuery object represent all inputs
-      for (let input of inputs) {
-        input = $(input); // Turn into JQuery object
-        const li = $(`<li>${input.val()}</li>`)
-        list.append(li);
-        input.val(''); // Empty out the box
-      const del = $(`<button>Delete</button>`)
+      const input = form.find('input'); // JQuery object represent all inputs
+      const li = $(`<div>${input.val()}</div>`)
+      input.val(''); // Empty out the box
+      obj.append(li);
 
-      }
-
-      counter++;
-      const p = $(`<p>Submit #${counter}</p>`)
+      const del = $(`<button type="delete">Delete</button>`)
+      obj.append(del);
 
       // add to the page
-      $('#history').append(p);
-      $('#history').append(list);
+      $('#history').append(obj);
+    });
+
+    $('div').on('click', 'button', function(event) {
+      $(this).closest('div').remove();
     });
 
     </script>
