@@ -29,7 +29,7 @@
         const list = $('<ul></ul>');
 
         // Translate each input value into a list item
-        const inputs = form.find('input'); // JQuery object represent all
+        const inputs = form.find('input'); // JQuery object represent all inputs
         for (let input of inputs) {
           input = $(input); // Turn into JQuery object
           const li = $(`<li>${input.val()}</li>`)
