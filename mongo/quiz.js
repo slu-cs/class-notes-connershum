@@ -25,7 +25,7 @@ console.log(labs4);
 const numbers = [5, 4, 3, 2, 1];
 
 // A. Get the first even number (by invoking the built-in find method).
-
+console.log(numbers.find(x => x%2 == 0));
 
 // B. Define a standalone find function. The array is its first argument and the callback is its second argument.
 
@@ -47,7 +47,6 @@ user.question('What is your name? ', function(name) {
     console.log('I am also', feeling, '.');
   });
 });
-
 
 // The user.question method doesn't actually return a promise, so here is a question function that does.
 // Call this question function in part B instead of calling the user.question method.
