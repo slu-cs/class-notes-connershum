@@ -36,7 +36,7 @@ const find = function(array, call) {
   }
 }
 
-console.log(find(numbers, x%2 == 0));
+console.log(find(numbers, x => x%2 == 0));
 
 //////////////////////////////////////////////////////////////// Question 3
 
