@@ -90,9 +90,9 @@ Promise.all([f1(), f2()])
     if (results[0] === results[1]) {
       console.log('equal');
     } if (results[0] > results[1]) {
-      console.log(results[0]);
+      console.log('f1');
     } else {
-      console.log(results[1]);
+      console.log('f2');
     }
 
 
