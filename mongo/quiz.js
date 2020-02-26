@@ -18,7 +18,7 @@ console.log(labs3);
 
 // C. Sort the existing array in order of (increasing) seat numbers (by invoking the built-in sort method).
 const labs4 = labs.sort((a,b) => a - b);
-console.log(lab4);
+console.log(labs4);
 
 //////////////////////////////////////////////////////////////// Question 2
 
