@@ -39,7 +39,7 @@ const find = function(array, call) {
 console.log(find(numbers, x => x%2 == 0));
 
 //////////////////////////////////////////////////////////////// Question 3
-
+/*
 // This creates the user object described on the quiz.
 // It has a question method you can call in part A.
 const readline = require('readline');
@@ -47,7 +47,7 @@ const user = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-/*
+
 // A. Make small talk, using traditional callbacks.
 user.question('What is your name? ', function(name) {
   console.log('Hello', name, '.');
@@ -55,7 +55,7 @@ user.question('What is your name? ', function(name) {
     console.log('I am also', feeling, '.');
   });
 });
-*/
+
 // The user.question method doesn't actually return a promise, so here is a question function that does.
 // Call this question function in part B instead of calling the user.question method.
 const question = function(prompt) {
@@ -65,14 +65,14 @@ const question = function(prompt) {
 // B. Make small talk again, using promises.
 question('What is your name? ')
   .then(resolve => console.log('Hello', resolve, '.'))
-  .then(question.exec('How are you doing? '))
+  .then(question('How are you doing? '))
   .then(resolve2 => console.log('I am also', resolve2, '.'))
   .catch(error => console.error(error.stack));
-
+*/
 //////////////////////////////////////////////////////////////// Question 4
 // Question 4 is commented out because otherwise it would interfere with Question 3.
 // When you're ready to work on Question 4, uncomment it and comment out Question 3.
-/*
+
 // This function returns a promise, which produces 42 after an asynchronous delay of one second.
 const f1 = function() {
   return new Promise(resolve => setTimeout(() => resolve(42), 1000));
@@ -84,6 +84,15 @@ const f2 = function() {
 };
 
 // Run f1 and f2 in parallel and log 'f1', 'f2', or 'equal' to indicate which function returned the larger result.
+Promise.all(f1.exec(), f2.exec())
+  .then((r1, r2) {
+    if (r1 === r2) {
+      console.log('equal');
+    } if (r1 > r2) {
+      console.log(r1);
+    } else {
+      console.log(r2)
+    }
 
 
-*/
+  }).catch(error => console.error(error.stack))
