@@ -68,7 +68,7 @@ question('What is your name? ')
     console.log('Hello', name, '.');
     return question('How are you doing? ');
   })
-    .then(resolve2 => console.log('I am also', resolve2, '.'))
+    .then(feeling => console.log('I am also', feeling, '.'))
     .catch(error => console.error(error.stack));
 
 //////////////////////////////////////////////////////////////// Question 4
