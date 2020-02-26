@@ -39,7 +39,7 @@ const find = function(array, call) {
 console.log(find(numbers, x => x%2 == 0));
 
 //////////////////////////////////////////////////////////////// Question 3
-/*
+
 // This creates the user object described on the quiz.
 // It has a question method you can call in part A.
 const readline = require('readline');
@@ -64,15 +64,17 @@ const question = function(prompt) {
 
 // B. Make small talk again, using promises.
 question('What is your name? ')
-  .then(resolve => console.log('Hello', resolve, '.'))
-  .then(question('How are you doing? '))
-  .then(resolve2 => console.log('I am also', resolve2, '.'))
-  .catch(error => console.error(error.stack));
-*/
+  .then(function(name) {
+    console.log('Hello', name, '.');
+    return question('How are you doing? ');
+  })
+    .then(resolve2 => console.log('I am also', resolve2, '.'))
+    .catch(error => console.error(error.stack));
+
 //////////////////////////////////////////////////////////////// Question 4
 // Question 4 is commented out because otherwise it would interfere with Question 3.
 // When you're ready to work on Question 4, uncomment it and comment out Question 3.
-
+/*
 // This function returns a promise, which produces 42 after an asynchronous delay of one second.
 const f1 = function() {
   return new Promise(resolve => setTimeout(() => resolve(42), 1000));
@@ -94,3 +96,5 @@ Promise.all([f1(), f2()])
       console.log('f2');
     }
   }).catch(error => console.error(error.stack))
+
+*/
