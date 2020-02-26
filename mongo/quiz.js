@@ -65,9 +65,9 @@ const question = function(prompt) {
 // B. Make small talk again, using promises.
 question('What is your name? ')
   .then(resolve => console.log('Hello', resolve, '.'))
-  .then(return question('How are you doing? '))
-    .then(resolve2 => console.log('I am also', resolve2, '.'))
-    .catch(error => console.error(error.stack));
+  //.then(question('How are you doing? '))
+  .then(question('How are you doing? ') => console.log('I am also', question('How are you doing? '), '.'))
+  .catch(error => console.error(error.stack));
 
 //////////////////////////////////////////////////////////////// Question 4
 // Question 4 is commented out because otherwise it would interfere with Question 3.
