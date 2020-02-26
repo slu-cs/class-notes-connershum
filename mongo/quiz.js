@@ -28,7 +28,15 @@ const numbers = [5, 4, 3, 2, 1];
 console.log(numbers.find(x => x%2 == 0));
 
 // B. Define a standalone find function. The array is its first argument and the callback is its second argument.
+const find = function(array, call) {
+  for (const element of array) {
+    if (call(element) === true){
+      return element;
+    }
+  }
+}
 
+console.log(find(numbers, x%2 == 0));
 
 //////////////////////////////////////////////////////////////// Question 3
 
