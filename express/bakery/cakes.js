@@ -4,7 +4,7 @@ const express = require('express');
 // Create the Router
 const router = express.Router();
 
-// cs-linuxlab-39.stlawu.edu:3000/
+// cs-linuxlab-39.stlawu.edu:3000/cakes
 router.get('/', function(request, response) {
   response.send(`
     <h1>Cakes</h1>
@@ -15,7 +15,7 @@ router.get('/', function(request, response) {
   `);
 });
 
-// cs-linuslab-39.stlawu.edu:3000/cakes//id
+// cs-linuslab-39.stlawu.edu:3000/cakes/id
 router.get('/id', function(request, response) {
   if (request.params.id === 'vanilla') {
     response.send('Vanilla cakes');
