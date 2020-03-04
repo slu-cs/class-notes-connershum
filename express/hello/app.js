@@ -6,7 +6,7 @@ const app = express();
 
 // Respond to one request
 app.get('/', function(request, response) {
-  resopnse.send('Hello Conner');
+  response.send('Hello Conner');
 });
 
 // Start the server
