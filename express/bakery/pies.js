@@ -7,20 +7,20 @@ const router = express.Router();
 // cs-linuxlab-39.stlawu.edu:3000/
 router.get('/', function(request, response) {
   response.send(`
-    <h1>Cakes</h1>
+    <h1>Pies</h1>
     <ul>
-      <li><a href="/cakes/vanilla">Vanilla</a></li>
-      <li><a href="/cakes/chocolate">Chocolate</a></li>
+      <li><a href="/cakes/apple">Apple</a></li>
+      <li><a href="/cakes/cherry">Cherry</a></li>
     </ul>
   `);
 });
 
 // cs-linuslab-39.stlawu.edu:3000/cakes//id
 router.get('/id', function(request, response) {
-  if (request.params.id === 'vanilla') {
-    response.send('Vanilla cakes');
-  } else if (request.params.id === 'chocolate') {
-    response.send('Chocolate cakes');
+  if (request.params.id === 'apple') {
+    response.send('Apple Pies');
+  } else if (request.params.id === 'cherry') {
+    response.send('Cherry Pies');
   } else {
     next();  // Pass on this request
   }
