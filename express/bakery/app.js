@@ -6,7 +6,7 @@ const app = express();
 
 // Use a view engine
 app.set('view engine', 'ejs');
-app.set('view', './views');
+app.set('views', './views');
 
 // Ignore icon requests
 app.get('/favicon.ico', function(request, response) {
