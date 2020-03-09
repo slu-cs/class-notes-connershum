@@ -7,7 +7,7 @@ const router = express.Router();
 // Pretend database collection
 const cakes = [
   {id: 'vanilla', flavor: 'Vanilla'},
-  {id: 'ch', flavor: 'Chocolate'}
+  {id: 'chocolate', flavor: 'Chocolate'}
 ];
 
 // cs-linuxlab-39.stlawu.edu:3000/cakes
