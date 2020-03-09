@@ -12,7 +12,7 @@ const cakes = [
 
 // cs-linuxlab-39.stlawu.edu:3000/pies/
 router.get('/', function(request, response) {
-  response.render('pies/index', {pies: pies}));
+  response.render('pies/index', {pies: pies});
 });
 
 // cs-linuslab-39.stlawu.edu:3000/pies/id
