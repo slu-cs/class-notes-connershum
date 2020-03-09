@@ -24,7 +24,7 @@ router.get('/:id', function(request, response, next) {
   if (!pie) {
     next(); // Pass on this request
   } else {
-    response.render('pie/detail', {pie: pie});
+    response.render('pies/detail', {pie: pie});
   }
 });
 module.exports = router;
