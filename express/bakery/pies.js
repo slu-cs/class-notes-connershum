@@ -5,7 +5,7 @@ const express = require('express');
 const router = express.Router();
 
 // Pretend database collection
-const cakes = [
+const pies = [
   {id: 'apple', flavor: 'Apple'},
   {id: 'cherry', flavor: 'Cherry'}
 ];
