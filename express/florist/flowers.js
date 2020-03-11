@@ -15,7 +15,7 @@ router.get('/', function(request, response) {
   if (request.query.color) {
     response.send(flowers.filter(f => f.color === request.query.color))
   } else if (request.query.season) {
-    response.send(flowers.filter(f => f.color === request.query.season))
+    response.send(flowers.filter(f => f.season === request.query.season))
   } else {
     response.send(flowers);
   }
