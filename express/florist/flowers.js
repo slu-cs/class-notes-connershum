@@ -28,7 +28,7 @@ router.get('/:id', function(request, response, next) {
 // POST /flowers
 router.post('/', function(request, response) {
   const flower = request.body;
-  if (flowers.find(f => i.id === flower.id)) {
+  if (flowers.find(f => f.id === flower.id)) {
     response.status(400).send('Duplicate');
   } else if (flowers.find(f => f.id === flower.id)) {
     response.status(400).send('Duplicate ID');
