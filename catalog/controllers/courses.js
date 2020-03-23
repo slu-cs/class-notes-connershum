@@ -2,7 +2,8 @@ const Course = require('../models/course');
 
 // GET /courses
 module.exports.index = function(request, response, next) {
-  r.then(courseIDs => response.redirect(`/courses/${courseIDs[0]}`))
+  Course.distinct('_id')
+    .then(courseIDs => response.redirect(`/courses/${courseIDs[0]}`))
     .catch(error => next(error));
 };
 
