@@ -1,12 +1,19 @@
 const Section = require('../models/section');
+const Course = require('../models/course');
 
 // GET /sections?sort=
 module.exports.index = function(request, response, next) {
   const order = request.query.sort || 'course'; // Default to sort by course
+ const days = Section.schema.path('day').enumValues;
 
-  Section.find().sort(order)
-    .then(sections => response.render('sections/index', {sections: sections, order: order}))
-    .catch(error => next(error));
+const queries = [
+    Section.find().sort(order),
+    Course.distinct('_id')
+  ];
+
+  Promise.all(queries).then(function([sections, courseIDs]) {
+    response.render('sections/index', {sections: sections, order: order, courseIDs: courseIDs, days: days});
+  }).catch(error => next(error));
 };
 
 // POST /sections (with the new section in the request body)
